@@ -7,5 +7,28 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <ul >
+  <% for(var i=0; i<Locations.length; i++) {%>
+    <li >
+      <span><%= Locations[i].Name %></span>
+      <span><%= Locations[i].Category %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/Locations" method="POST">
+    <input type="text" placeholder="name" name="Name">
+    <input type="text" placeholder="Category" name="Category">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div>
+  <h2>Update Location</h2>
+  <button id="update"> Update Location </button>
+  <h2>Update Location</h2>
+  <button id="delete"> Delete Location </button>
+</div>
+ <script src="main.js"></script>
   </body>
 </html>
